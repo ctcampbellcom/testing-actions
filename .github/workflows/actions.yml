@@ -1,0 +1,17 @@
+name: Testing various Actions things
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test-find-codeql:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Look for CodeQL in the Actions tool cache
+        shell: bash
+        run: |
+          find "${{ runner.tool_cache }}/CodeQL" -maxdepth 1 -mindepth 1 -type d -print \
+            | sort \
+            | tail -n 1 \
+            | tr -d '\n'
