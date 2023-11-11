@@ -12,8 +12,6 @@ jobs:
   triage-alert:
     runs-on: ubuntu-latest
     steps:
-      - name: Dump payload
-        run: echo "${{ github.event.client_payload }}"
       - name: User dismissed an alert
         if: |
           github.event.client_payload.action == 'closed_by_user' &&
