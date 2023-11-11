@@ -6,7 +6,7 @@ on:
       - code_scanning_alert
 
 env:
-  GH_TOKEN: ${{ secrets.token }}
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
   triage-alert:
