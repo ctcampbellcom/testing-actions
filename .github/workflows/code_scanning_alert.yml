@@ -17,9 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          gh api \
+          gh api /repos/${{ github.event.client_payload.repository.owner.login }}/${{ github.event.client_payload.repository.name }}/code-scanning/alerts/${{ github.event.client_payload.alert.number }} -f state='open' \
             --method PATCH \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            /repos/${{ github.event.client_payload.repository.owner.login }}/${{ github.event.client_payload.repository.name }}/code-scanning/alerts/${{ github.event.client_payload.alert.number }} \
-            -f state='open'
