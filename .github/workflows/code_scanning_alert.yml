@@ -9,14 +9,14 @@ env:
   GH_TOKEN: ${{ github.token }}
 
 jobs:
-  triage-alert:
+  user-dismissed-an-alert:
+    name: User dismissed an alert
+    if: |
+      github.event.client_payload.action == 'closed_by_user' &&
+      github.event.client_payload.alert.state == 'dismissed'
     runs-on: ubuntu-latest
     steps:
-      - name: User dismissed an alert
-        if: |
-          github.event.client_payload.action == 'closed_by_user' &&
-          github.event.client_payload.alert.state == 'dismissed'
-        run: |
+      - run: |
           gh api \
             --method PATCH \
             -H "Accept: application/vnd.github+json" \
