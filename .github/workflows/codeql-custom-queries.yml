@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: github/codeql-action/init@v2
         with:
+          languages: python
           config: |
             disable-default-queries: true
             queries:
