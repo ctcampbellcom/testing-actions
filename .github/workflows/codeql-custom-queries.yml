@@ -13,6 +13,8 @@ jobs:
           languages: python
           source-root: src/python/
           packs: codeql/python-queries:experimental/cryptography/inventory/new_models
+          config: |
+            disable-default-queries: true
       - uses: github/codeql-action/autobuild@v2
       - uses: github/codeql-action/analyze@v2
           
