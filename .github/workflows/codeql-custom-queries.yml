@@ -7,7 +7,7 @@ jobs:
   run-codeql:
     runs-on: ubuntu-latest
     steps:
-      - uses: github/codeql-action/init@main
+      - uses: github/codeql-action/init@v2
         with:
           config: |
             disable-default-queries: true
@@ -16,6 +16,6 @@ jobs:
             query-filters:
               - include:
                 tags: /cbom/
-      - uses: github/codeql-action/autobuild@main
-      - uses: github/codeql-action/analyze@main
+      - uses: github/codeql-action/autobuild@v2
+      - uses: github/codeql-action/analyze@v2
           
