@@ -18,7 +18,7 @@ jobs:
               - uses: security-experimental
             query-filters:
               - include:
-                  tags contain: cbom
+                  tags contain: security
       - uses: github/codeql-action/autobuild@v2
       - uses: github/codeql-action/analyze@v2
           
