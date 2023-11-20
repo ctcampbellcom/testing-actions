@@ -12,7 +12,7 @@ jobs:
           config: |
             disable-default-queries: true
             queries:
-              - uses: security-experminental
+              - uses: security-experimental
             query-filters:
               - include:
                 tags: /cbom/
