@@ -1,3 +1,5 @@
+name: Run CodeQL with custom query selection
+
 on:
   workflow_dispatch:
 
