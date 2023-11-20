@@ -12,12 +12,7 @@ jobs:
         with:
           languages: python
           source-root: src/python/
-          config: |
-            packs:
-              - codeql/python-queries
-            query-filters:
-              - include:
-                  tags contain: cbom
+          packs: codeql/python-queries:experimental/cryptography/inventory/new_models
       - uses: github/codeql-action/autobuild@v2
       - uses: github/codeql-action/analyze@v2
           
