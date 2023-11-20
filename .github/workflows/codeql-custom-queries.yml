@@ -13,7 +13,6 @@ jobs:
           languages: python
           source-root: src/python/
           config: |
-            disable-default-queries: true
             packs:
               - codeql/python-queries
             query-filters:
