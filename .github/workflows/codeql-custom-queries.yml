@@ -14,7 +14,7 @@ jobs:
           source-root: src/python/
           config: |
             disable-default-queries: true
-            qlpack: codeql/python-queries
+            qlpack: codeql/python-all
             query-filters:
               - include:
                   tags contain: cbom
