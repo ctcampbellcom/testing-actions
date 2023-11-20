@@ -14,11 +14,10 @@ jobs:
           source-root: src/python/
           config: |
             disable-default-queries: true
-            queries:
-              - uses: security-experimental
+            qlpack: codeql/python-queries
             query-filters:
               - include:
-                  tags contain: security
+                  tags contain: cbom
       - uses: github/codeql-action/autobuild@v2
       - uses: github/codeql-action/analyze@v2
           
