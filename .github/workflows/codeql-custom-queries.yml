@@ -15,7 +15,7 @@ jobs:
           config: |
             disable-default-queries: true
             packs:
-              - codeql-queries/python-queries
+              - codeql/python-queries
             query-filters:
               - include:
                   tags contain: cbom
