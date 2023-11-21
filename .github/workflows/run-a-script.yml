@@ -10,6 +10,7 @@ jobs:
       - run: |
           set -ex
           git status
+        continue-on-error: true
       - uses: actions/checkout@v4
       - run: |
           set -ex
