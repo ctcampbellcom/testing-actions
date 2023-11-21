@@ -1,0 +1,16 @@
+name: Run a script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-a-script:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          set -ex
+          git status
+      - uses: actions/checkout@v4
+      - run: |
+          set -ex
+          git status
